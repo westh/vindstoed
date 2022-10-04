@@ -1,0 +1,46 @@
+{
+  "name": "@westh/vindstoed",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "repository": "git@github.com:westh/vindstoed.git",
+  "keywords": [
+    "scrape",
+    "power consumption",
+    "vindstød",
+    "vindstoed",
+    "why is this data not just freely available?"
+  ],
+  "author": "westh <haakonwesth@gmail.com>",
+  "description": "🕸 tiny(ish) webscraper that extracts the power consumption from Vindstød",
+  "scripts": {
+    "start": "node index.js",
+    "test": "node test.js",
+    "lint": "eslint --ignore-path .gitignore --fix .",
+    "lint-staged": "lint-staged"
+  },
+  "lint-staged": {
+    "*.js": [
+      "yarn lint"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "dependencies": {
+    "puppeteer": "^18.0.5"
+  },
+  "devDependencies": {
+    "dotenv": "^16.0.3",
+    "eslint": "^7.10.0",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "husky": "^4.3.0",
+    "lint-staged": "^10.4.0"
+  }
+}
